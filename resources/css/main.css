@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Import cute font */
+@font-face{
+    font-family: pixel;
+    src: url(../fonts/pixel_ttf.ttf);
+}
+
+/* Import hella cute font */
+@font-face{
+    font-family: pixel2;
+    src: url(../fonts/rank_otf.otf);
+}
+
+h1, h2, h3, h4, h5, h6, p, span{
+    font-family: pixel, sans-serif;
+    color: lightblue;
+    text-align: center;
+    display: inline-block;
+}
+
+#header, #footer{
+    width: 100vw;
+    position: fixed;
+    z-index: 1000;
+}
+
+#header{
+  height: 97px;
+}
+
+#footer{
+    bottom: -6px;
+}
+
+.inline-wrapper{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Change the direction of inline-wrapper */
+.inline-wrapper form label{
+  flex-basis: 100%;
+}
+
+#game #clickArea{
+    background: url(../content/background/background1.png) top no-repeat fixed;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: block;
+}
+
+/* Game screen styling */
+#frame-top, #frame-top-bg{
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  object-fit: contain;
+  height: 97px;
+}
+
+#frame-top-bg{
+  height: 70px;
+  object-fit: fill;
+  border-bottom: 2px solid #d28d0d;
+}
+
+#frame-bottom-bg{
+  height: 21px;
+  width: 100%;
+  border-top: 3px solid #d28d0d;
+}
+
+.bar{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 6px 0 6px;
+}
+
+#bar-rank {
+  margin-top: 6px;
+}
+
+#bar-rank .bar-values{
+  font-family: pixel2, sans-serif !important;
+  font-size: 2em;
+}
+
+#bar-coins, #bar-gems{
+  align-self: center;
+}
+
+
+.bar-values{
+  position: absolute;
+}
+
+#bar-gems .bar-values{
+  right: 35%;
+  top: 15%;
+}
+
+#bar-coins .bar-values{
+  left: 30%;
+  top: 20%;
+}
